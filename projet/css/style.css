@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.container {
+    display: flex;
+    background: url('../img/Sans-titre-1.jpg') 100% 100% no-repeat;
+    padding-top: 50px;
+}
+
+.image {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.image img {
+    display: flex;
+    width: 75%;
+}
+
+.text {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text img {
+    display: flex;
+    width: 80%;
+}
+
+.text a {
+	background-color:#FCF700;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:'Roboto';
+	font-size:20px;
+	padding:16px 60px;
+	text-decoration:none;
+}
+
+.text a:hover {
+    transition: 0.2s;
+    color: #FCF700;
+	background-color:#000000;
+}
+
+.trailer {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer iframe{
+    position: relative;
+    max-width: 900px;
+    outline: none;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    max-width: 32px;
+}
+
+@media (max-width: 991px) {
+    .trailer iframe {
+        max-width: 90%;
+    }
+}
